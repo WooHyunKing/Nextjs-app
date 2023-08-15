@@ -1,6 +1,8 @@
+import { ITopic } from "@/interfaces/Topic";
+import axios from "axios";
 import React from "react";
 
-const ReadIdPage = ({
+const ReadIdPage = async ({
   // Dynamic routing
   params,
 }: {
@@ -8,9 +10,12 @@ const ReadIdPage = ({
     id: string;
   };
 }) => {
+  const response = await axios.get(`http://localhost:9999/topics/${params.id}`);
+  const topic: ITopic = response.data;
   return (
     <div>
-      <h2>This is Read(id :{params.id}) page !</h2>
+      <h2>{topic.title}</h2>
+      {topic.body}
     </div>
   );
 };
