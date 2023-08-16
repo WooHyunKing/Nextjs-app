@@ -1,6 +1,7 @@
 "use client";
+import axios from "axios";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
 // server component 내에서는 현재 동적 라우팅의 값([id])을 layout 안에서는 알 수 없습니다.
 // 따라서 useParams Hook을 사용해야 하는데 useParams는 client component입니다.
@@ -9,7 +10,15 @@ import { useParams } from "next/navigation";
 
 const Control = () => {
   const params = useParams();
+  const router = useRouter();
   const id = params.id;
+
+  const onClickDelete = async () => {
+    const response = await axios.delete(`http://localhost:9999/topics/${id}`);
+    console.log(response);
+    router.push("/");
+    router.refresh();
+  };
   return (
     <ul>
       <li>
@@ -21,7 +30,7 @@ const Control = () => {
             <Link href={`/update/${id}`}>update</Link>
           </li>
           <li>
-            <button>delete</button>
+            <button onClick={onClickDelete}>delete</button>
           </li>
         </>
       ) : null}

@@ -16,11 +16,6 @@
       "body": "Javascript is ..."
     },
     {
-      "title": "hi",
-      "body": "hhhdi",
-      "id": 4
-    },
-    {
       "title": "React",
       "body": "React is ..",
       "id": 5
@@ -31,28 +26,13 @@
       "id": 6
     },
     {
-      "title": "hello",
-      "body": "hello",
-      "id": 7
-    },
-    {
-      "title": "hello",
-      "body": "hello",
-      "id": 8
-    },
-    {
-      "title": "bye",
-      "body": "bye",
-      "id": 9
-    },
-    {
       "title": "angular",
       "body": "angular is ..",
       "id": 10
     },
     {
-      "title": "React",
-      "body": "React is ..",
+      "title": "Spring",
+      "body": "Spring is ..",
       "id": 11
     }
   ],
