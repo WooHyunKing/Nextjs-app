@@ -12,8 +12,8 @@
     },
     {
       "id": 3,
-      "title": "javascript",
-      "body": "javascript is ..."
+      "title": "Javascript",
+      "body": "Javascript is ..."
     },
     {
       "title": "hi",
@@ -21,8 +21,8 @@
       "id": 4
     },
     {
-      "title": "react",
-      "body": "react is ..",
+      "title": "React",
+      "body": "React is ..",
       "id": 5
     },
     {
@@ -49,6 +49,11 @@
       "title": "angular",
       "body": "angular is ..",
       "id": 10
+    },
+    {
+      "title": "React",
+      "body": "React is ..",
+      "id": 11
     }
   ],
   "posts": [
