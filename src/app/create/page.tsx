@@ -11,7 +11,7 @@ const CreatePage = () => {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await axios.post(
-      "http://localhost:9999/topics/",
+      `${process.env.NEXT_PUBLIC_API_URL}topics`,
       { title: title, body: body },
       {
         headers: {

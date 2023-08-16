@@ -14,7 +14,9 @@ const Control = () => {
   const id = params.id;
 
   const onClickDelete = async () => {
-    const response = await axios.delete(`http://localhost:9999/topics/${id}`);
+    const response = await axios.delete(
+      `${process.env.NEXT_PUBLIC_API_URL}topics/${id}`
+    );
     console.log(response);
     router.push("/");
     router.refresh();

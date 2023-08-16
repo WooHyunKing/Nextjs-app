@@ -12,8 +12,8 @@
     },
     {
       "id": 3,
-      "title": "Javascript",
-      "body": "Javascript is ..."
+      "title": "JavaScript",
+      "body": "JavaScript is ..."
     },
     {
       "title": "React",
@@ -21,19 +21,9 @@
       "id": 5
     },
     {
-      "title": "vue",
-      "body": "vue is ..",
+      "title": "Vue.js",
+      "body": "Vue.js is ..",
       "id": 6
-    },
-    {
-      "title": "angular",
-      "body": "angular is ..",
-      "id": 10
-    },
-    {
-      "title": "Spring",
-      "body": "Spring is ..",
-      "id": 11
     }
   ],
   "posts": [

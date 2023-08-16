@@ -48,7 +48,7 @@ export default async function RootLayout({
   // useEffect(() => {
   //   getTopics();
   // }, []);
-  const response = await axios.get("http://localhost:9999/topics");
+  const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}topics`);
   const topics: ITopic[] = response.data;
   console.log(topics);
 

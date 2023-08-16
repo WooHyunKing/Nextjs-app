@@ -10,7 +10,9 @@ const ReadIdPage = async ({
     id: string;
   };
 }) => {
-  const response = await axios.get(`http://localhost:9999/topics/${params.id}`);
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_URL}topics/${params.id}`
+  );
   const topic: ITopic = response.data;
   return (
     <div>

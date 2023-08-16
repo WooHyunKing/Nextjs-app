@@ -17,7 +17,7 @@ const UpdatePage = ({
 
   const getData = async () => {
     const response = await axios.get(
-      `http://localhost:9999/topics/${params.id}`
+      `${process.env.NEXT_PUBLIC_API_URL}topics/${params.id}`
     );
     setTitle(response.data.title);
     setBody(response.data.body);
@@ -26,7 +26,7 @@ const UpdatePage = ({
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await axios.patch(
-      `http://localhost:9999/topics/${params.id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}topics/${params.id}`,
       { title: title, body: body },
       {
         headers: {
