@@ -24,6 +24,7 @@ import type { Metadata } from "next";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ITopic } from "@/interfaces/Topic";
+import Control from "@/components/Control";
 
 export const metadata: Metadata = {
   title: "Web tutorial",
@@ -71,17 +72,7 @@ export default async function RootLayout({
           ))}
         </ol>
         {children}
-        <ul>
-          <li>
-            <Link href="/create">create</Link>
-          </li>
-          <li>
-            <Link href="/update/id">update</Link>
-          </li>
-          <li>
-            <button>delete</button>
-          </li>
-        </ul>
+        <Control />
       </body>
     </html>
   );
